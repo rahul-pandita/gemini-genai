@@ -1,1 +1,6 @@
-models/gemini-1.0-promodels/gemini-1.0-pro-001models/gemini-1.0-pro-latestmodels/gemini-1.0-pro-vision-latestmodels/gemini-promodels/gemini-pro-vision
+models/gemini-1.0-pro
+models/gemini-1.0-pro-001
+models/gemini-1.0-pro-latest
+models/gemini-1.0-pro-vision-latest
+models/gemini-pro
+models/gemini-pro-vision

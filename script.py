@@ -3,8 +3,8 @@ import os
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-with open("models.txt", "w") as f:
-    for model in genai.list_models():
-        if "generateContent" in model.supported_generation_methods:
-            f.write(model.name)
+model = genai.GenerativeModel("gemini-pro")
 
+response = model.generate_content("Write a poem on love in the style of the author Fyodor Dostoevsky")
+
+print(response.text)
