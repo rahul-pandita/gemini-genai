@@ -6,8 +6,12 @@ img = PIL.Image.open("calc.jpg")
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-model = genai.GenerativeModel("gemini-pro-vision")
+model = genai.GenerativeModel("gemini-pro")
 
-response = model.generate_content(["The following image contains an image of a mathematics problem written in human handwriting. Give a detailed step by step solution to the problem. Also identify the branch of mathematics to which this problem belongs", img])
+chat = model.start_chat()
 
-print(response.text)
+while True:
+    message = input("User: ")
+    response = chat.send_message(message)
+
+    print("Gemini: " + response.text)
